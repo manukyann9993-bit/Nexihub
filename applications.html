@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexihab - Հայտեր</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Nexihab">
+                <span>Nexihab</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Մեր Մասին</a></li>
+                <li><a href="volunteering.html">Կամավորություն</a></li>
+                <li><a href="applications.html">Հայտեր</a></li>
+            </ul>
+            <a href="applications.html" class="btn-primary">Դիմել</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Դարձիր <span>Կամավոր</span></h1>
+            <p>Լրացրու հայտը և մեր թիմը կկապվի քեզ հետ մոտակա օրերին։</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Կամավորի Հայտ</h2>
+
+                <form>
+                    <div class="form-group">
+                        <label for="name">Անուն Ազգանուն *</label>
+                        <input type="text" id="name" name="name" required placeholder="Անի Սարգսյան">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Էլ. Փոստ *</label>
+                        <input type="email" id="email" name="email" required placeholder="ani@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Հեռախոս *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+374 XX XXX XXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Տարիք *</label>
+                        <input type="number" id="age" name="age" required placeholder="25">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Ընտրիր Ծրագիր *</label>
+                        <select id="program" name="program" required>
+                            <option value="">Ընտրել...</option>
+                            <option value="green">Կանաչ Հայաստան</option>
+                            <option value="education">Կրթություն Բոլորի Համար</option>
+                            <option value="elderly">Հոգատարություն Տարեցներին</option>
+                            <option value="art">Արվեստ և Մշակույթ</option>
+                            <option value="health">Առողջության Աջակցություն</option>
+                            <option value="tech">Թվային Տեխնոլոգիաներ</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Նախորդ Փորձ (ստուգան)</label>
+                        <textarea id="experience" name="experience"
+                            placeholder="Նկարագրիր քո նախորդ կամավորական փորձը..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Ինչո՞ւ ես ուզում դառնալ կամավոր *</label>
+                        <textarea id="motivation" name="motivation" required
+                            placeholder="Պատմիր մեզ քո մոտիվացիայի մասին..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="availability">Հասանելիություն *</label>
+                        <select id="availability" name="availability" required>
+                            <option value="">Ընտրել...</option>
+                            <option value="weekdays">Աշխատանքային Օրեր</option>
+                            <option value="weekends">Շաբաթ-Կիրակի</option>
+                            <option value="flexible">Ճկուն Ժամանակացույց</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary"
+                        style="width: 100%; font-size: 1.1rem; padding: 1.2rem;">Ուղարկել Հայտը</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-logo-section">
+                <a href="index.html" class="logo">
+                    <img src="logo-white.png" alt="Nexihab">
+                    <span>Nexihab</span>
+                </a>
+                <p style="opacity: 0.8;">Հայաստանի ամենախոշոր կամավորական կազմակերպություն։</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>ՄԵՆՅՈՒ</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Մեր Մասին</a></li>
+                    <li><a href="volunteering.html">Կամավորություն</a></li>
+                    <li><a href="applications.html">Հայտեր</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>ՀԵՏԵՎԵՔ ՄԵԶ</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-contact">
+                <a href="tel:+37410000000">📞 +374 10 000 000</a>
+                <a href="mailto:info@nexihab.am">📧 info@nexihab.am</a>
+            </div>
+            <p class="footer-copyright">© 2026 Nexihab. Բոլոր իրավունքները պաշտպանված են։</p>
+        </div>
+    </footer>
+</body>
+
+</html>
