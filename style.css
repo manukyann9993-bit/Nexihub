@@ -103,23 +103,40 @@ nav {
     width: 100%;
 }
 
-/* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
 }
 
 .mobile-menu-btn span {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background: var(--orange-primary);
     border-radius: 3px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 .btn-primary {
@@ -294,6 +311,84 @@ nav {
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+/* Custom File Upload Styling (Google Forms Aesthetic) */
+.file-upload-card {
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: none;
+}
+
+.file-upload-card label.field-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem !important;
+    display: block;
+    color: #202124;
+}
+
+.file-upload-card .file-description {
+    color: #70757a;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.hidden-file-input {
+    display: none !important;
+}
+
+.add-file-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #1a73e8;
+    /* Signature blue - will stay blue or orange as requested */
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    user-select: none;
+    width: fit-content;
+}
+
+/* Override color to orange for branding consistent with the rest of the site */
+.add-file-label {
+    color: var(--orange-primary) !important;
+}
+
+.add-file-label svg {
+    stroke-width: 2px;
+}
+
+.add-file-label:hover {
+    background: #f8f9fa;
+    border-color: #d2d2d2;
+}
+
+.filename-display {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #3c4043;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    width: fit-content;
+    background: #f8f9fa;
+}
+
+.filename-display:empty {
+    display: none;
 }
 
 /* Footer */
@@ -667,9 +762,58 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+
+/* --- Responsive Design --- */
+
+@media (max-width: 1024px) {
     .nav-links {
-        display: none;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 2rem;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    nav .btn-primary {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
     }
 
     .hero h1 {
@@ -680,7 +824,92 @@ footer {
         font-size: 1.1rem;
     }
 
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
     .cards-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .directors-grid {
+        gap: 2rem;
+    }
+
+    .director-icon-box {
+        width: 220px;
+        height: 220px;
+        border-width: 12px;
+        border-radius: 40px;
+    }
+
+    .director-icon-box svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .director-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        /* Reduced from 3.5rem to fix "ugly" look in screenshot */
+    }
+
+    .stat-number::after {
+        width: 100px;
+    }
+
+    .partner-item {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo span {
+        display: none;
+        /* Only show icon on very small phones to avoid overlap */
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .partner-item {
+        width: 110px;
+        height: 110px;
+    }
+
+    .btn-primary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
     }
 }

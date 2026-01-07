@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexihab - Հայտեր</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,7 +22,14 @@
                 <li><a href="support.html">Աջակցություն</a></li>
                 <li><a href="applications.html">Անձնակազմի Դիմում</a></li>
             </ul>
-            <a href="applications.html" class="btn-primary">Դիմել</a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="applications.html" class="btn-primary">Դիմել</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -44,11 +52,13 @@
                         target="_blank" style="color: var(--orange-primary);">անձնակազմի քաղաքականությանը</a>, կարող եք
                     շարունակել դիմելու գործընթացը։</p>
 
-                <form action="https://formsubmit.co/manukyann9993@gmail.com" method="POST">
+                <form action="https://formsubmit.co/manukyann9993@gmail.com" method="POST"
+                    enctype="multipart/form-data">
                     <!-- Hidden fields for FormSubmit configuration -->
                     <input type="hidden" name="_subject" value="Նոր Կամավորի Հայտ - Nexihab">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_charset" value="UTF-8">
 
                     <!-- Personal Information -->
                     <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">Անձի մասին</h3>
@@ -228,38 +238,88 @@
                         </h3>
 
                         <div class="form-group">
-                            <label for="hr_q1">HR-ի հիմնական նպատակն ի՞նչ է <span style="color: red;">*</span></label>
-                            <textarea id="hr_q1" name="HR - Նպատակ" class="team-question"></textarea>
+                            <label for="hr_q1">Ի՞նչն է, Ձեր կարծիքով, մարդու ռեսուրսների գլխավոր նպատակը կազմակերպության
+                                համար։<span style="color: red;">*</span></label>
+                            <textarea id="hr_q1" name="HR - Նպատակ" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="hr_q2">Ի՞նչ քայլեր կձեռնարկեք թիմի ցածր մոտիվացիայի դեպքում <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="hr_q2" name="HR - Մոտիվացիա" class="team-question"></textarea>
+                            <label for="hr_q2">Ինչպե՞ս եք համադրում կազմակերպության շահերը և աշխատակիցների
+                                բարեկեցությունը։<span style="color: red;">*</span></label>
+                            <textarea id="hr_q2" name="HR - շահեր" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="hr_q3">Նկարագրեք թիմում կոնֆլիկտի լուծման իրավիճակ <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="hr_q3" name="HR - Կոնֆլիկտ" class="team-question"></textarea>
+                            <label for="hr_q3">Ի՞նչ քայլեր եք ձեռնարկում, երբ տեսնում եք, որ թիմում կա ցածր
+                                մոտիվացիա։<span style="color: red;">*</span></label>
+                            <textarea id="hr_q3" name="HR - մոտիվացիա" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="hr_q4">Ինչպե՞ս կվարվեք թեկնածուի հետ, ով չի համապատասխանում <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="hr_q4" name="HR - Թեկնածու" class="team-question"></textarea>
+                            <label for="hr_q4">Պատմե՛ք մի իրավիճակի մասին, երբ լուծել եք բարդ կոնֆլիկտ աշխատակիցների
+                                միջև։ Ի՞նչ մոտեցում եք կիրառել։
+                                <span style="color: red;">*</span></label>
+                            <textarea id="hr_q4" name="HR - Տվյալներ" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="hr_q5">Ինչպե՞ս օգտագործել HR տվյալները որոշումների համար <span
+                            <label for="hr_q5">Ի՞նչ եք անում, երբ զգում եք, որ ընտրված թեկնածուն իր տեղում չէ։<span
                                     style="color: red;">*</span></label>
-                            <textarea id="hr_q5" name="HR - Տվյալներ" class="team-question"></textarea>
+                            <textarea id="hr_q5" name="HR - Թեկնածու" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="hr_q6">Ավելի լավ է՝ ճշմարտություն ասել, թե բոլորին հաճո՞յ անել <span
+                            <label for="hr_q6">Ինչպե՞ս եք HR-ի տվյալները (Data-Driven HR) օգտագործում ռազմավարական
+                                որոշումների մեջ։ <span style="color: red;">*</span></label>
+                            <input type="text" id="hr_q6" name="HR - տվյալներ" class="team-question" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hr_q7">Որպես HR մասնագետ՝ ի՞նչն է ձեզ համար կարևոր՝ արդյո՞ք ճիշտն ասել, թե՞
+                                բոլորին դուր գալ։
+                                <span style="color: red;">*</span></label>
+                            <input type="text" id="hr_q7" name="HR - Ճշմարտություն" class="team-question" required>
+                        </div>
+
+                        <div class="file-upload-card">
+                            <label class="field-title" for="hr_cv">CV (Ինքնակենսագրական) <span
                                     style="color: red;">*</span></label>
-                            <input type="text" id="hr_q6" name="HR - Ճշմարտություն" class="team-question">
+                            <p class="file-description">PDF, DOC, DOCX, կամ նկար (առավելագույնը 1 ֆայլ)</p>
+                            <div class="custom-file-input-wrapper">
+                                <input type="file" id="hr_cv" name="HR_CV"
+                                    class="team-question cv-field hidden-file-input" required
+                                    onchange="handleFileSelect(this)" style="display: none !important;">
+                                <label for="hr_cv" class="add-file-label">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    Add file
+                                </label>
+                            </div>
+                            <div id="hr_cv_filename" class="filename-display"></div>
+                        </div>
+
+                        <div class="file-upload-card">
+                            <label class="field-title" for="hr_portfolio">Portfolio (Աշխատանքների օրինակներ)</label>
+                            <p class="file-description">Եթե ունեք պորտֆոլիո</p>
+                            <div class="custom-file-input-wrapper">
+                                <input type="file" id="hr_portfolio" name="HR_Portfolio"
+                                    class="team-question portfolio-field hidden-file-input"
+                                    onchange="handleFileSelect(this)" style="display: none !important;">
+                                <label for="hr_portfolio" class="add-file-label">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    Add file
+                                </label>
+                            </div>
+                            <div id="hr_portfolio_filename" class="filename-display"></div>
                         </div>
                     </div>
 
@@ -269,27 +329,80 @@
                         </h3>
 
                         <div class="form-group">
-                            <label for="smm_q1">Ի՞նչ մետրիկաներ եք օգտագործում գնահատման համար <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="smm_q1" name="SMM - Մետրիկաներ" class="team-question"></textarea>
+                            <label for="smm_q1">Ի՞նչ հիմնական ցուցանիշներ (metrics) եք օգտագործում արդյունքների
+                                գնահատման համար: <span style="color: red;">*</span></label>
+                            <textarea id="smm_q1" name="SMM_Metrics" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="smm_q2">Ի՞նչ կանեք, եթե էջի ակտիվությունը կտրուկ ընկնի <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="smm_q2" name="SMM - Ակտիվություն" class="team-question"></textarea>
+                            <label for="smm_q2">Բերե՛ք մի կոնկրետ օրինակ՝ երբ ձեր SMM ռազմավարությունը բերել է չափելի
+                                արդյունքի: <span style="color: red;">*</span></label>
+                            <textarea id="smm_q2" name="SMM_Example" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="smm_q3">Ինչպե՞ս որոշել բովանդակության ոճը և տոնը <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="smm_q3" name="SMM - Ոճ" class="team-question"></textarea>
+                            <label for="smm_q3">Ինչպե՞ս եք պլանավորում կոնտենտը մի քանի հարթակների համար միաժամանակ:
+                                <span style="color: red;">*</span></label>
+                            <textarea id="smm_q3" name="SMM_Planning" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="smm_q4">Ո՞րն է տարբերությունը օրգանիկ և վճարովի բովանդակության միջև <span
+                            <label for="smm_q4">Ի՞նչ կանեիք, եթե էջի ակտիվությունը կտրուկ իջներ: <span
                                     style="color: red;">*</span></label>
-                            <textarea id="smm_q4" name="SMM - Օրգանիկ vs Վճարովի" class="team-question"></textarea>
+                            <textarea id="smm_q4" name="SMM_Crisis" class="team-question" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="smm_q5">Ինչպե՞ս եք որոշում կոնտենտի ոճը և տոնը տարբեր լսարանների համար: <span
+                                    style="color: red;">*</span></label>
+                            <textarea id="smm_q5" name="SMM_Style" class="team-question" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="smm_q6">Ի՞նչ տարբերություն կա օրգանիկ (organic) և վճարովի (paid) կոնտենտի
+                                ռազմավարության մեջ: <span style="color: red;">*</span></label>
+                            <textarea id="smm_q6" name="SMM_Organic_Paid" class="team-question" required></textarea>
+                        </div>
+
+                        <div class="file-upload-card">
+                            <label class="field-title" for="smm_cv">CV (Ինքնակենսագրական) <span
+                                    style="color: red;">*</span></label>
+                            <p class="file-description">PDF, DOC, DOCX, կամ նկար (առավելագույնը 1 ֆայլ)</p>
+                            <div class="custom-file-input-wrapper">
+                                <input type="file" id="smm_cv" name="SMM_CV"
+                                    class="team-question cv-field hidden-file-input" required
+                                    onchange="handleFileSelect(this)" style="display: none !important;">
+                                <label for="smm_cv" class="add-file-label">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    Add file
+                                </label>
+                            </div>
+                            <div id="smm_cv_filename" class="filename-display"></div>
+                        </div>
+
+                        <div class="file-upload-card">
+                            <label class="field-title" for="smm_portfolio">Portfolio (Աշխատանքների օրինակներ)</label>
+                            <p class="file-description">Եթե ունեք պորտֆոլիո</p>
+                            <div class="custom-file-input-wrapper">
+                                <input type="file" id="smm_portfolio" name="SMM_Portfolio"
+                                    class="team-question portfolio-field hidden-file-input"
+                                    onchange="handleFileSelect(this)" style="display: none !important;">
+                                <label for="smm_portfolio" class="add-file-label">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    Add file
+                                </label>
+                            </div>
+                            <div id="smm_portfolio_filename" class="filename-display"></div>
                         </div>
                     </div>
 
@@ -299,33 +412,87 @@
                         </h3>
 
                         <div class="form-group">
-                            <label for="pr_q1">Ինչպե՞ս եք սահմանում լավ PR ռազմավարություն <span
+                            <label for="pr_q1">Ինչպե՞ս եք սահմանում լավ PR ռազմավարություն: <span
                                     style="color: red;">*</span></label>
-                            <textarea id="pr_q1" name="PR - Ռազմավարություն" class="team-question"></textarea>
+                            <textarea id="pr_q1" name="PR_Strategy" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="pr_q2">Ինչպե՞ս կապել PR-ը մարքեթինգային նպատակների հետ <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="pr_q2" name="PR - Մարքեթինգ" class="team-question"></textarea>
+                            <label for="pr_q2">Ինչպե՞ս եք աշխատում մամուլի հետ՝ ապահովելու համար հրապարակումներ ու
+                                համագործակցություն: <span style="color: red;">*</span></label>
+                            <textarea id="pr_q2" name="PR_Media" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="pr_q3">Ինչպե՞ս կազմակերպեք հանրային արշավ կամ իրադարձություն <span
+                            <label for="pr_q3">Ինչպե՞ս եք վարում հակազդեցություն՝ երբ կազմակերպությունը հայտնվում է
+                                բացասական ինֆորմացիայի կամ սկանդալի կենտրոնում: <span
                                     style="color: red;">*</span></label>
-                            <textarea id="pr_q3" name="PR - Իրադարձություն" class="team-question"></textarea>
+                            <textarea id="pr_q3" name="PR_Reaction" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="pr_q4">Ո՞րն է տարբերությունը PR-ի և մարքեթինգի միջև <span
+                            <label for="pr_q4">Ինչպե՞ս եք կապում PR-ը մարքեթինգային նպատակների հետ: <span
                                     style="color: red;">*</span></label>
-                            <textarea id="pr_q4" name="PR - Տարբերություն" class="team-question"></textarea>
+                            <textarea id="pr_q4" name="PR_Marketing" class="team-question" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="pr_q5">Ինչպե՞ս չափել PR-ի արդյունավետությունը <span
+                            <label for="pr_q5">Ի՞նչ քայլերով եք կազմակերպում հասարակական արշավ (public campaign) կամ
+                                միջոցառում՝ PR նպատակներով: <span style="color: red;">*</span></label>
+                            <textarea id="pr_q5" name="PR_Campaign" class="team-question" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pr_q6">Ի՞նչ տարբերություն կա PR-ի և մարքեթինգի միջև: Ինչպե՞ս եք համադրում դրանք:
+                                <span style="color: red;">*</span></label>
+                            <textarea id="pr_q6" name="PR_vs_Marketing" class="team-question" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pr_q7">Ինչպե՞ս եք չափում PR ռազմավարության արդյունավետությունը: <span
                                     style="color: red;">*</span></label>
-                            <textarea id="pr_q5" name="PR - Արդյունավետություն" class="team-question"></textarea>
+                            <textarea id="pr_q7" name="PR_Efficiency" class="team-question" required></textarea>
+                        </div>
+
+                        <div class="file-upload-card">
+                            <label class="field-title" for="pr_cv">CV (Ինքնակենսագրական) <span
+                                    style="color: red;">*</span></label>
+                            <p class="file-description">PDF, DOC, DOCX, կամ նկար (առավելագույնը 1 ֆայլ)</p>
+                            <div class="custom-file-input-wrapper">
+                                <input type="file" id="pr_cv" name="PR_CV"
+                                    class="team-question cv-field hidden-file-input" required
+                                    onchange="handleFileSelect(this)" style="display: none !important;">
+                                <label for="pr_cv" class="add-file-label">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    Add file
+                                </label>
+                            </div>
+                            <div id="pr_cv_filename" class="filename-display"></div>
+                        </div>
+
+                        <div class="file-upload-card">
+                            <label class="field-title" for="pr_portfolio">Portfolio (Աշխատանքների օրինակներ)</label>
+                            <p class="file-description">Եթե ունեք պորտֆոլիո</p>
+                            <div class="custom-file-input-wrapper">
+                                <input type="file" id="pr_portfolio" name="PR_Portfolio"
+                                    class="team-question portfolio-field hidden-file-input"
+                                    onchange="handleFileSelect(this)" style="display: none !important;">
+                                <label for="pr_portfolio" class="add-file-label">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    Add file
+                                </label>
+                            </div>
+                            <div id="pr_portfolio_filename" class="filename-display"></div>
                         </div>
                     </div>
 
@@ -350,26 +517,49 @@
                             q.disabled = true;
                         });
 
-                        // Show selected team questions and make them required/enabled
-                        if (selectedTeam === 'HR') {
-                            document.getElementById('hr-questions').style.display = 'block';
-                            document.querySelectorAll('#hr-questions .team-question').forEach(q => {
-                                q.setAttribute('required', 'required');
+                        // Show selected team questions and enable them
+                        if (selectedTeam === 'HR' || selectedTeam === 'SMM' || selectedTeam === 'PR') {
+                            const sectionId = selectedTeam.toLowerCase() + '-questions';
+                            document.getElementById(sectionId).style.display = 'block';
+
+                            document.querySelectorAll('#' + sectionId + ' .team-question').forEach(q => {
                                 q.disabled = false;
-                            });
-                        } else if (selectedTeam === 'SMM') {
-                            document.getElementById('smm-questions').style.display = 'block';
-                            document.querySelectorAll('#smm-questions .team-question').forEach(q => {
-                                q.setAttribute('required', 'required');
-                                q.disabled = false;
-                            });
-                        } else if (selectedTeam === 'PR') {
-                            document.getElementById('pr-questions').style.display = 'block';
-                            document.querySelectorAll('#pr-questions .team-question').forEach(q => {
-                                q.setAttribute('required', 'required');
-                                q.disabled = false;
+                                // CV and other questions are required, Portfolio is NOT
+                                if (!q.classList.contains('portfolio-field')) {
+                                    q.setAttribute('required', 'required');
+                                }
                             });
                         }
+                    }
+
+                    function handleFileSelect(input) {
+                        const filenameDisplay = document.getElementById(input.id + '_filename');
+                        if (input.files.length > 0) {
+                            filenameDisplay.textContent = '📎 ' + input.files[0].name;
+                        } else {
+                            filenameDisplay.textContent = '';
+                        }
+                    }
+
+                    // Mobile Menu Toggle
+                    const mobileBtn = document.querySelector('.mobile-menu-btn');
+                    const navLinks = document.querySelector('.nav-links');
+
+                    if (mobileBtn && navLinks) {
+                        mobileBtn.addEventListener('click', function () {
+                            this.classList.toggle('active');
+                            navLinks.classList.toggle('active');
+                            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                        });
+
+                        // Close menu when clicking links
+                        navLinks.querySelectorAll('a').forEach(link => {
+                            link.addEventListener('click', () => {
+                                mobileBtn.classList.remove('active');
+                                navLinks.classList.remove('active');
+                                document.body.style.overflow = '';
+                            });
+                        });
                     }
 
                     // Initialize execution
