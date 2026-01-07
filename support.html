@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexihab - Հայտեր</title>
+    <title>Nexihab - Աջակցություն</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,22 +27,15 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Անձնակազմի<span> Դիմում</span></h1>
-            <p>Լրացրու հայտը և մեր թիմը կկապվի քեզ հետ 72 ժամվա ընթացքում</p>
+            <h1>Դարձիր <span>Կամավոր</span></h1>
+            <p>Լրացրու հայտը և մեր թիմը կկապվի քեզ հետ մոտակա օրերին։</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
             <div class="form-container">
-                <p
-                    style="text-align: left; margin-bottom: 2rem; background: var(--orange-bg); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--orange-primary); color: var(--gray); font-size: 0.95rem; line-height: 1.6;">
-                    Հարգելի դիմորդ, եթե համապատասխանում եք <a
-                        href="https://docs.google.com/document/d/1AJEc4n_lBj5jvq-BY9KF0_b9XzTZ0z4VN1FblZkxXgo/edit?usp=sharing"
-                        target="_blank" style="color: var(--orange-primary);">նշված պայմաններին</a> և համաձայն եք <a
-                        href="https://docs.google.com/document/d/1c0MUm4L7Gx_7wxAFtaESjtFvC1SfZNt78JcN2E75NTU/edit?usp=sharing"
-                        target="_blank" style="color: var(--orange-primary);">անձնակազմի քաղաքականությանը</a>, կարող եք
-                    շարունակել դիմելու գործընթացը։</p>
+                <h2 style="text-align: center; margin-bottom: 2rem;">Կամավորի Հայտ</h2>
 
                 <form action="https://formsubmit.co/manukyann9993@gmail.com" method="POST">
                     <!-- Hidden fields for FormSubmit configuration -->
@@ -214,7 +207,7 @@
 
                     <div class="form-group">
                         <label for="team">Որ թիմին եք ցանկանում միանալ <span style="color: red;">*</span></label>
-                        <select id="team" name="Թիմ" required onchange="showTeamQuestions()">
+                        <select id="team" name="Թիմ" required>
                             <option value="">Ընտրել...</option>
                             <option value="HR">HR - Մարդկային ռեսուրսներ</option>
                             <option value="SMM">SMM - Սոցիալական մեդիա մենեջմենթ</option>
@@ -222,161 +215,10 @@
                         </select>
                     </div>
 
-                    <!-- HR Team Questions -->
-                    <div id="hr-questions" style="display: none;">
-                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">HR Թիմի Հարցեր
-                        </h3>
-
-                        <div class="form-group">
-                            <label for="hr_q1">HR-ի հիմնական նպատակն ի՞նչ է <span style="color: red;">*</span></label>
-                            <textarea id="hr_q1" name="HR - Նպատակ" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="hr_q2">Ի՞նչ քայլեր կձեռնարկեք թիմի ցածր մոտիվացիայի դեպքում <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="hr_q2" name="HR - Մոտիվացիա" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="hr_q3">Նկարագրեք թիմում կոնֆլիկտի լուծման իրավիճակ <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="hr_q3" name="HR - Կոնֆլիկտ" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="hr_q4">Ինչպե՞ս կվարվեք թեկնածուի հետ, ով չի համապատասխանում <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="hr_q4" name="HR - Թեկնածու" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="hr_q5">Ինչպե՞ս օգտագործել HR տվյալները որոշումների համար <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="hr_q5" name="HR - Տվյալներ" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="hr_q6">Ավելի լավ է՝ ճշմարտություն ասել, թե բոլորին հաճո՞յ անել <span
-                                    style="color: red;">*</span></label>
-                            <input type="text" id="hr_q6" name="HR - Ճշմարտություն" class="team-question">
-                        </div>
-                    </div>
-
-                    <!-- SMM Team Questions -->
-                    <div id="smm-questions" style="display: none;">
-                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">SMM Թիմի Հարցեր
-                        </h3>
-
-                        <div class="form-group">
-                            <label for="smm_q1">Ի՞նչ մետրիկաներ եք օգտագործում գնահատման համար <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="smm_q1" name="SMM - Մետրիկաներ" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="smm_q2">Ի՞նչ կանեք, եթե էջի ակտիվությունը կտրուկ ընկնի <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="smm_q2" name="SMM - Ակտիվություն" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="smm_q3">Ինչպե՞ս որոշել բովանդակության ոճը և տոնը <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="smm_q3" name="SMM - Ոճ" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="smm_q4">Ո՞րն է տարբերությունը օրգանիկ և վճարովի բովանդակության միջև <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="smm_q4" name="SMM - Օրգանիկ vs Վճարովի" class="team-question"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- PR Team Questions -->
-                    <div id="pr-questions" style="display: none;">
-                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">PR Թիմի Հարցեր
-                        </h3>
-
-                        <div class="form-group">
-                            <label for="pr_q1">Ինչպե՞ս եք սահմանում լավ PR ռազմավարություն <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="pr_q1" name="PR - Ռազմավարություն" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="pr_q2">Ինչպե՞ս կապել PR-ը մարքեթինգային նպատակների հետ <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="pr_q2" name="PR - Մարքեթինգ" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="pr_q3">Ինչպե՞ս կազմակերպեք հանրային արշավ կամ իրադարձություն <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="pr_q3" name="PR - Իրադարձություն" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="pr_q4">Ո՞րն է տարբերությունը PR-ի և մարքեթինգի միջև <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="pr_q4" name="PR - Տարբերություն" class="team-question"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="pr_q5">Ինչպե՞ս չափել PR-ի արդյունավետությունը <span
-                                    style="color: red;">*</span></label>
-                            <textarea id="pr_q5" name="PR - Արդյունավետություն" class="team-question"></textarea>
-                        </div>
-                    </div>
-
                     <button type="submit" class="btn-primary"
                         style="width: 100%; font-size: 1.1rem; padding: 1.2rem; margin-top: 2rem;">Ուղարկել
                         Հայտը</button>
                 </form>
-
-                <script>
-                    function showTeamQuestions() {
-                        const teamSelect = document.getElementById('team');
-                        const selectedTeam = teamSelect.value;
-
-                        // Hide all team question sections
-                        document.getElementById('hr-questions').style.display = 'none';
-                        document.getElementById('smm-questions').style.display = 'none';
-                        document.getElementById('pr-questions').style.display = 'none';
-
-                        // Disable all team questions and remove required attribute
-                        document.querySelectorAll('.team-question').forEach(q => {
-                            q.removeAttribute('required');
-                            q.disabled = true;
-                        });
-
-                        // Show selected team questions and make them required/enabled
-                        if (selectedTeam === 'HR') {
-                            document.getElementById('hr-questions').style.display = 'block';
-                            document.querySelectorAll('#hr-questions .team-question').forEach(q => {
-                                q.setAttribute('required', 'required');
-                                q.disabled = false;
-                            });
-                        } else if (selectedTeam === 'SMM') {
-                            document.getElementById('smm-questions').style.display = 'block';
-                            document.querySelectorAll('#smm-questions .team-question').forEach(q => {
-                                q.setAttribute('required', 'required');
-                                q.disabled = false;
-                            });
-                        } else if (selectedTeam === 'PR') {
-                            document.getElementById('pr-questions').style.display = 'block';
-                            document.querySelectorAll('#pr-questions .team-question').forEach(q => {
-                                q.setAttribute('required', 'required');
-                                q.disabled = false;
-                            });
-                        }
-                    }
-
-                    // Initialize execution
-                    document.addEventListener('DOMContentLoaded', function () {
-                        showTeamQuestions();
-                    });
-                </script>
             </div>
         </div>
     </section>
@@ -386,7 +228,7 @@
             <div class="footer-logo-section">
                 <a href="index.html" class="logo">
                     <img src="logo-white.png" alt="Nexihab">
-                    <span>Nexihab</span>
+                    <span>Nex<span style="color: #7b726c;">ihab</span></span>
                 </a>
                 <p style="opacity: 0.8;">Հայաստանի ամենախոշոր կամավորական կազմակերպություն։</p>
             </div>
