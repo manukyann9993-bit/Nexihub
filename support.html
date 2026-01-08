@@ -19,7 +19,8 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Մեր Մասին</a></li>
-                <li><a href="volunteering.html">Կամավորություն</a></li>
+                <li><a href="volunteering.html">Միջոցառումներ</a></li>
+                <li><a href="news.html">Նորություններ</a></li>
                 <li><a href="support.html">Աջակցություն</a></li>
                 <li><a href="applications.html">Անձնակազմի Դիմում</a></li>
             </ul>
@@ -36,7 +37,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Դարձիր <span>Կամավոր</span></h1>
+            <h1>Դիմիր <span>Աջակցության համար</span></h1>
             <p>Լրացրու հայտը և մեր թիմը կկապվի քեզ հետ մոտակա օրերին։</p>
         </div>
     </section>
@@ -44,188 +45,45 @@
     <section class="section">
         <div class="container">
             <div class="form-container">
-                <h2 style="text-align: center; margin-bottom: 2rem;">Կամավորի Հայտ</h2>
+                <h2 style="text-align: center; margin-bottom: 2rem;">Աջակցության հայտ</h2>
 
                 <form action="https://formsubmit.co/manukyann9993@gmail.com" method="POST">
                     <!-- Hidden fields for FormSubmit configuration -->
-                    <input type="hidden" name="_subject" value="Նոր Կամավորի Հայտ - Nexihab">
+                    <input type="hidden" name="_subject" value="Նոր Աջակցության հայտ - Nexihab">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
 
-                    <!-- Personal Information -->
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">Անձի մասին</h3>
-
                     <div class="form-group">
-                        <label for="name">Անուն, Ազգանուն <span style="color: red;">*</span></label>
-                        <input type="text" id="name" name="Անուն Ազգանուն" required placeholder="անուն ազգանուն">
+                        <label for="name">Անուն, Ազգանուն <span
+                                style="font-size: 0.85rem; color: var(--gray); font-weight: normal;">(Ցանկությամբ)</span></label>
+                        <input type="text" id="name" name="Անուն Ազգանուն" placeholder="Ձեր անունը">
                     </div>
 
                     <div class="form-group">
-                        <label for="birthdate">Տարիք <span style="color: red;">*</span></label>
-                        <input type="date" id="birthdate" name="Ծննդյան ամսաթիվ" required>
+                        <label for="email">Էլեկտրոնային Հասցե <span
+                                style="font-size: 0.85rem; color: var(--gray); font-weight: normal;">(հետադարձ կապի
+                                համար)</span></label>
+                        <input type="email" id="email" name="Էլ․ հասցե" placeholder="example@mail.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="residence">Բնակության վայր (Քաղաք/գյուղ, մարզ) <span
-                                style="color: red;">*</span></label>
-                        <input type="text" id="residence" name="Բնակության վայր" required placeholder="Երևան, Կենտրոն">
-                    </div>
-
-                    <!-- Contact Information -->
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">Կապի միջոցներ</h3>
-
-                    <div class="form-group">
-                        <label for="email">Էլ. հասցե <span style="color: red;">*</span></label>
-                        <input type="email" id="email" name="Էլ․ հասցե" required placeholder="nexihub@gmail.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Հեռախոսահամար <span style="color: red;">*</span></label>
-                        <input type="tel" id="phone" name="Հեռախոսահամար" required placeholder="+374 XX XXX XXX">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telegram">Telegram-ի օգտատիրոջ անունը <span style="color: red;">*</span></label>
-                        <input type="text" id="telegram" name="Telegram" required placeholder="@username">
-                    </div>
-
-                    <!-- Social Networks -->
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">Սոցիալական ցանցեր
-                    </h3>
-
-                    <div class="form-group">
-                        <label for="instagram">Instagram-ի հղումը</label>
-                        <input type="url" id="instagram" name="Instagram" placeholder="https://instagram.com/username">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="facebook">Facebook</label>
-                        <input type="url" id="facebook" name="Facebook" placeholder="https://facebook.com/username">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tiktok">TikTok</label>
-                        <input type="url" id="tiktok" name="TikTok" placeholder="https://tiktok.com/@username">
-                    </div>
-
-                    <!-- Work Experience -->
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">Աշխատանքային
-                        տվյալներ</h3>
-
-                    <div class="form-group">
-                        <label for="skills">Որ հմտություններով կցանկանաք օգտակար լինել թիմին <span
-                                style="color: red;">*</span></label>
-                        <textarea id="skills" name="Հմտություններ" required
-                            placeholder="Նկարագրիր քո հմտություններն ու փորձը..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="portfolio">Ունե՞ք պորտֆոլիո կամ աշխատանքների օրինակներ <span
-                                style="color: red;">*</span></label>
-                        <select id="portfolio" name="Պորտֆոլիո" required>
+                        <label for="support_type">Աջակցության տեսակ <span style="color: red;">*</span></label>
+                        <select id="support_type" name="Աջակցության_Տեսակ" required>
                             <option value="">Ընտրել...</option>
-                            <option value="Այո">Այո</option>
-                            <option value="Ոչ">Ոչ</option>
+                            <option value="բողոք">Բողոք</option>
+                            <option value="խնդիր">Խնդիր</option>
+                            <option value="կարծիք">Կարծիք</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="motivation">Ի՞նչն է ձեզ դրդել միանալ Nexihab-ին <span
-                                style="color: red;">*</span></label>
-                        <textarea id="motivation" name="Մոտիվացիա" required
-                            placeholder="Պատմիր մեզ քո մոտիվացիայի մասին..."></textarea>
-                    </div>
-
-                    <!-- Language Skills -->
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">Լեզուների
-                        իմացություն</h3>
-
-                    <div class="form-group">
-                        <label for="english">English <span style="color: red;">*</span></label>
-                        <select id="english" name="Անգլերեն" required>
-                            <option value="">Ընտրել մակարդակ...</option>
-                            <option value="A1">A1 - Սկսնակ</option>
-                            <option value="A2">A2 - Տարրական</option>
-                            <option value="B1">B1 - Միջին</option>
-                            <option value="B2">B2 - Բարձր Միջին</option>
-                            <option value="C1">C1 - Առաջադեմ</option>
-                            <option value="C2">C2 - Վարպետ</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="russian">Russian <span style="color: red;">*</span></label>
-                        <select id="russian" name="Ռուսերեն" required>
-                            <option value="">Ընտրել մակարդակ...</option>
-                            <option value="A1">A1 - Սկսնակ</option>
-                            <option value="A2">A2 - Տարրական</option>
-                            <option value="B1">B1 - Միջին</option>
-                            <option value="B2">B2 - Բարձր Միջին</option>
-                            <option value="C1">C1 - Առաջադեմ</option>
-                            <option value="C2">C2 - Վարպետ</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="french">French</label>
-                        <select id="french" name="Ֆրանսերեն">
-                            <option value="">Ընտրել մակարդակ...</option>
-                            <option value="A1">A1 - Սկսնակ</option>
-                            <option value="A2">A2 - Տարրական</option>
-                            <option value="B1">B1 - Միջին</option>
-                            <option value="B2">B2 - Բարձր Միջին</option>
-                            <option value="C1">C1 - Առաջադեմ</option>
-                            <option value="C2">C2 - Վարպետ</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="chinese">Chinese</label>
-                        <select id="chinese" name="Չինարեն">
-                            <option value="">Ընտրել մակարդակ...</option>
-                            <option value="A1">A1 - Սկսնակ</option>
-                            <option value="A2">A2 - Տարրական</option>
-                            <option value="B1">B1 - Միջին</option>
-                            <option value="B2">B2 - Բարձր Միջին</option>
-                            <option value="C1">C1 - Առաջադեմ</option>
-                            <option value="C2">C2 - Վարպետ</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="german">German</label>
-                        <select id="german" name="Գերմաներեն">
-                            <option value="">Ընտրել մակարդակ...</option>
-                            <option value="A1">A1 - Սկսնակ</option>
-                            <option value="A2">A2 - Տարրական</option>
-                            <option value="B1">B1 - Միջին</option>
-                            <option value="B2">B2 - Բարձր Միջին</option>
-                            <option value="C1">C1 - Առաջադեմ</option>
-                            <option value="C2">C2 - Վարպետ</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="other_languages">Այլ լեզուներ</label>
-                        <input type="text" id="other_languages" name="Այլ լեզուներ"
-                            placeholder="Օր․՝ Իսպաներեն (B1), Իտալերեն (A2)">
-                    </div>
-
-                    <!-- Team Selection -->
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--orange-primary);">Թիմ և աշխատանք</h3>
-
-                    <div class="form-group">
-                        <label for="team">Որ թիմին եք ցանկանում միանալ <span style="color: red;">*</span></label>
-                        <select id="team" name="Թիմ" required>
-                            <option value="">Ընտրել...</option>
-                            <option value="HR">HR - Մարդկային ռեսուրսներ</option>
-                            <option value="SMM">SMM - Սոցիալական մեդիա մենեջմենթ</option>
-                            <option value="PR">PR - Հասարակայնության հետ կապեր</option>
-                        </select>
+                        <label for="message">Բողոք / Խնդիր / Կարծիք <span style="color: red;">*</span></label>
+                        <textarea id="message" name="Հաղորդագրություն" required
+                            placeholder="Մանրամասնեք Ձեր հարցը..."></textarea>
                     </div>
 
                     <button type="submit" class="btn-primary"
-                        style="width: 100%; font-size: 1.1rem; padding: 1.2rem; margin-top: 2rem;">Ուղարկել
+                        style="width: 100%; font-size: 1.1rem; padding: 1.2rem; margin-top: 2rem; border: none !important; outline: none !important; box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);">Ուղարկել
                         Հայտը</button>
                 </form>
             </div>
@@ -246,7 +104,8 @@
                 <h3>ՄԵՆՅՈՒ</h3>
                 <ul class="footer-links">
                     <li><a href="index.html">Մեր Մասին</a></li>
-                    <li><a href="volunteering.html">Կամավորություն</a></li>
+                    <li><a href="volunteering.html">Միջոցառումներ</a></li>
+                    <li><a href="news.html">Նորություններ</a></li>
                     <li><a href="support.html">Աջակցություն</a></li>
                     <li><a href="applications.html">Հայտեր</a></li>
                 </ul>
@@ -255,9 +114,8 @@
             <div class="footer-section">
                 <h3>ՀԵՏԵՎԵՔ ՄԵԶ</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Telegram</a></li>
+                    <li><a href="https://t.me/nexihab_armenia" target="_blank">Telegram</a></li>
+                    <li><a href="https://www.instagram.com/nexihab_armenia/">Instagram</a></li>
                 </ul>
             </div>
         </div>

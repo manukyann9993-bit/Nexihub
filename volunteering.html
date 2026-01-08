@@ -15,16 +15,17 @@
         <nav>
             <a href="index.html" class="logo">
                 <img src="logo.jpg" alt="Nexihab">
-                <span style="color: #FF8C42;">Nex<span style="color: #7b726c;">ihab</span></span>
+                <span style="color: #FF8C42; flex-shrink: 0;">Nex<span style="color: #7b726c;">ihab</span></span>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Մեր Մասին</a></li>
-                <li><a href="volunteering.html">Կամավորություն</a></li>
+                <li><a href="volunteering.html" class="active">Միջոցառումներ</a></li>
+                <li><a href="news.html">Նորություններ</a></li>
                 <li><a href="support.html">Աջակցություն</a></li>
                 <li><a href="applications.html">Անձնակազմի Դիմում</a></li>
             </ul>
             <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="applications.html" class="btn-primary">Դիմել</a>
+                <a href="applications.html" class="btn-primary" style="flex-shrink: 0;">Դիմել</a>
                 <button class="mobile-menu-btn" aria-label="Menu">
                     <span></span>
                     <span></span>
@@ -36,7 +37,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Կամավորական <span>Հնարավորություններ</span></h1>
+            <h1>Մեր <span>Միջոցառումները</span></h1>
             <p>Գտիր քեզ համար հետաքրքիր ծրագիր և մի՛ սպասիր՝ փոփոխությունը սկսիր այսօր։</p>
         </div>
     </section>
@@ -46,78 +47,125 @@
             <h2 class="section-title">Ընթացիկ Ծրագրեր</h2>
             <p class="section-subtitle">Ընտրիր քեզ հետաքրքրող ուղղությունը և միացիր մեր թիմին</p>
 
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-image">🌳</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Կանաչ Հայաստան</h3>
-                        <p class="card-text">Ծառատունկ և շրջակա միջավայրի մաքրման ծրագրեր Հայաստանի տարբեր մարզերում։
-                            Մենք արդեն տնկել ենք ավելի քան 10,000 ծառ։</p>
-                        <a href="applications.html" class="btn-primary">Միացիր</a>
+            <div class="volunteer-grid">
+                <!-- Project 1 -->
+                <div class="volunteer-card" onclick="openVol(1)">
+                    <div class="volunteer-card-image">
+                        <div class="volunteer-card-badge">coming-soon</div>
+                        <img src="coming-soon.png" alt="coming-soon">
+                    </div>
+                    <div class="volunteer-card-content">
+                        <h3>Շուտով</h3>
+                        <p>Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ
+                            միջոցառում չկա 🫤</p>
+                    </div>
+                    <div class="volunteer-card-footer">
+                        <span class="volunteer-card-link">Իմանալ Ավելին &rarr;</span>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">📚</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Կրթություն Բոլորի Համար</h3>
-                        <p class="card-text">Դասավանդիր անգլերեն, մաթեմատիկա կամ այլ առարկաներ գյուղական դպրոցներում։
-                            Օգնիր երեխաներին ձևավորել լավ ապագա։</p>
-                        <a href="applications.html" class="btn-primary">Միացիր</a>
+                <!-- Project 2 -->
+                <div class="volunteer-card" onclick="openVol(1)">
+                    <div class="volunteer-card-image">
+                        <div class="volunteer-card-badge">coming-soon</div>
+                        <img src="coming-soon.png" alt="coming-soon">
+                    </div>
+                    <div class="volunteer-card-content">
+                        <h3>Շուտով</h3>
+                        <p>Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ
+                            միջոցառում չկա 🫤</p>
+                    </div>
+                    <div class="volunteer-card-footer">
+                        <span class="volunteer-card-link">Իմանալ Ավելին &rarr;</span>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">👴</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Հոգատարություն Տարեցներին</h3>
-                        <p class="card-text">Այցելիր և օգնիր տարեցներին։ Մի քիչ ժամանակ և ուշադրություն կարող է
-                            խոշորապես փոխել մարդու կյանքը։</p>
-                        <a href="applications.html" class="btn-primary">Միացիր</a>
+                <!-- Project 3 -->
+                <div class="volunteer-card" onclick="openVol(1)">
+                    <div class="volunteer-card-image">
+                        <div class="volunteer-card-badge">coming-soon</div>
+                        <img src="coming-soon.png" alt="coming-soon">
+                    </div>
+                    <div class="volunteer-card-content">
+                        <h3>Շուտով</h3>
+                        <p>Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ
+                            միջոցառում չկա 🫤</p>
+                    </div>
+                    <div class="volunteer-card-footer">
+                        <span class="volunteer-card-link">Իմանալ Ավելին &rarr;</span>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">🎨</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Արվեստ և Մշակույթ</h3>
-                        <p class="card-text">Կազմակերպիր և մասնակցիր մշակույթային միջոցառումների, որոնք միավորում են
-                            հասարակությունը։</p>
-                        <a href="applications.html" class="btn-primary">Միացիր</a>
+                <!-- Project 4 -->
+                <div class="volunteer-card" onclick="openVol(1)">
+                    <div class="volunteer-card-image">
+                        <div class="volunteer-card-badge">coming-soon</div>
+                        <img src="coming-soon.png" alt="coming-soon">
+                    </div>
+                    <div class="volunteer-card-content">
+                        <h3>Շուտով</h3>
+                        <p>Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ
+                            միջոցառում չկա 🫤</p>
+                    </div>
+                    <div class="volunteer-card-footer">
+                        <span class="volunteer-card-link">Իմանալ Ավելին &rarr;</span>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">🏥</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Առողջության Աջակցություն</h3>
-                        <p class="card-text">Օգնիր առողջապահական իրազեկման և անվճար բժշկական զննումների կազմակերպման
-                            գործում։</p>
-                        <a href="applications.html" class="btn-primary">Միացիր</a>
+                <!-- Project 5 -->
+                <div class="volunteer-card" onclick="openVol(1)">
+                    <div class="volunteer-card-image">
+                        <div class="volunteer-card-badge">coming-soon</div>
+                        <img src="coming-soon.png" alt="coming-soon">
+                    </div>
+                    <div class="volunteer-card-content">
+                        <h3>Շուտով</h3>
+                        <p>Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ
+                            միջոցառում չկա 🫤</p>
+                    </div>
+                    <div class="volunteer-card-footer">
+                        <span class="volunteer-card-link">Իմանալ Ավելին &rarr;</span>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">💻</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Թվային Տեխնոլոգիաներ</h3>
-                        <p class="card-text">Սովորեցրու հիմնական համակարգչային հմտություններ և օգնիր մարդկանց հարմարվել
-                            թվային ժամանակաշրջանին։</p>
-                        <a href="applications.html" class="btn-primary">Միացիր</a>
+                <!-- Project 6 -->
+                <div class="volunteer-card" onclick="openVol(1)">
+                    <div class="volunteer-card-image">
+                        <div class="volunteer-card-badge">coming-soon</div>
+                        <img src="coming-soon.png" alt="coming-soon">
+                    </div>
+                    <div class="volunteer-card-content">
+                        <h3>Շուտով</h3>
+                        <p>Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ
+                            միջոցառում չկա 🫤</p>
+                    </div>
+                    <div class="volunteer-card-footer">
+                        <span class="volunteer-card-link">Իմանալ Ավելին &rarr;</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" style="background: linear-gradient(135deg, var(--orange-bg) 0%, white 100%);">
-        <div class="container" style="text-align: center;">
-            <h2 class="section-title">Պատրա՞ստ Ես</h2>
-            <p class="section-subtitle">Միացիր մեզ և փոխիր աշխարհը</p>
-            <a href="applications.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">Լրացրու
-                Հայտը</a>
+    <!-- Modal System (Light Theme) -->
+    <div id="vol-modal" class="modal light-theme">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="date" id="modal-badge-display"
+                    style="text-transform: uppercase; font-size: 0.9rem;"></span>
+                <h2 id="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Volunteering Image">
+                <div id="modal-text" style="margin-bottom: 2rem;"></div>
+                <div style="text-align: center;">
+                    <button id="join-btn" class="btn-primary"
+                        style="padding: 1rem 3rem; font-size: 1.1rem;">Գրանցվել</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="footer-grid">
@@ -133,7 +181,8 @@
                 <h3>ՄԵՆՅՈՒ</h3>
                 <ul class="footer-links">
                     <li><a href="index.html">Մեր Մասին</a></li>
-                    <li><a href="volunteering.html">Կամավորություն</a></li>
+                    <li><a href="volunteering.html">Միջոցառումներ</a></li>
+                    <li><a href="news.html">Նորություններ</a></li>
                     <li><a href="support.html">Աջակցություն</a></li>
                     <li><a href="applications.html">Հայտեր</a></li>
                 </ul>
@@ -142,23 +191,124 @@
             <div class="footer-section">
                 <h3>ՀԵՏԵՎԵՔ ՄԵԶ</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Telegram</a></li>
+                    <li><a href="https://t.me/nexihab_armenia" target="_blank">Telegram</a></li>
+                    <li><a href="https://www.instagram.com/nexihab_armenia/">Instagram</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
             <div class="footer-contact">
-                <a href="tel:+37410000000">📞 +374 10 000 000</a>
-                <a href="mailto:info@nexihab.am">📧 info@nexihab.am</a>
+                <a href="tel:+37433355255">📞 +374 33355255</a>
+                <a href="mailto:info@nexihab.am">📧 nexihab.armenia@gmail.com</a>
             </div>
             <p class="footer-copyright">© 2026 Nexihab. Բոլոր իրավունքները պաշտպանված են։</p>
         </div>
     </footer>
+
     <script>
-        // Mobile Menu Toggle
+        // Volunteering Data
+        const volData = {
+            1: {
+                title: "Շուտով",
+                badge: "Coming-Soon",
+                image: "coming-soon.png",
+                text: "Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ միջոցառում չկա 🫤"
+            },
+            2: {
+                title: "Կրթություն Բոլորի Համար",
+                badge: "Կրթություն",
+                image: "coming-soon.png",
+                text: "Կրթությունը հզորագույն զենքն է աշխարհը փոխելու համար: Այս նախագծի շրջանակներում մեր կամավորները դասավանդում են անգլերեն, մաթեմատիկա և ՏՏ հմտություններ մարզային դպրոցների աշակերտներին: Մենք օգնում ենք երեխաներին հավատալ սեփական ուժերին և ձեռք բերել գիտելիքներ, որոնք դուռ կբացեն դեյի նոր հնարավորություններ: Եթե ունես գիտելիքով կիսվելու ցանկություն, դու այն մարդն ես, ում մենք փնտրում ենք:"
+            },
+            3: {
+                title: "Հոգատարություն Տարեցներին",
+                badge: "Սոցիալական Աջակցություն",
+                image: "coming-soon.png",
+                text: "Տարեցները մեր պատմությունն ու իմաստությունն են: Այս ծրագիրն ուղղված է նրանց առօրյան ավելի գունեղ ու ջերմ դարձնելուն: Կամավորները այցելում են միայնակ տարեցներին, օգնում կենցաղային հարցերում, կամ պարզապես զրուցում ու լսում նրանց պատմությունները: Հաճախ մեկ ժամ զրույցը կարող է ավելի մեծ ազդեցություն ունենալ, քան ցանկացած նյութական օգնություն: Միացիր և ջերմացրու մեկի սիրտը:"
+            },
+            4: {
+                title: "Արվեստ և Մշակույթ",
+                badge: "Արվեստ",
+                image: "coming-soon.png",
+                text: "Մշակույթը հասարակության հիմքն է: Մենք կազմակերպում ենք ցուցահանդեսներ, համերգներ և փառատոններ, որոնք նպաստում են հայկական արվեստի տարածմանը և երիտասարդ արվեստագետների բացահայտմանը: Մեր կամավորները օգնում են միջոցառումների կազմակերպման, PR-ի և դիզայնի հարցերում: Եթե ստեղծագործ ես ու սիրում ես արվեստը, այս հարթակը հենց քեզ համար է:"
+            },
+            5: {
+                title: "Առողջության Աջակցություն",
+                badge: "Առողջապահություն",
+                image: "coming-soon.png",
+                text: "Առողջ հասարակությունը հաջողության գրավականն է: Մեր թիմը իրականացնում է առողջապահական իրազեկման արշավներ, կազմակերպում է առաջին օգնության դասընթացներ և աջակցում է մարզային բժշկական կենտրոններին: Մենք հավատում ենք, որ կանխարգելումը լավագույն բուժումն է, և մեր կամավորները օգնում են տարածել այս կարևոր գաղափարը ողջ Հայաստանում:"
+            },
+            6: {
+                title: "Թվային Տեխնոլոգիաներ",
+                badge: "Տեխնոլոգիաներ",
+                image: "coming-soon.png",
+                text: "Ժամանակակից աշխարհում թվային հմտությունները անհրաժեշտություն են: Մենք սովորեցնում ենք տարբեր տարիքի մարդկանց օգտվել համակարգչից, համացանցից և անվտանգության հիմունքներից: Մեր նպատակն է նվազեցնել թվային անջրպետը և օգնել մարդկանց ավելի արդյունավետ օգտագործել տեխնոլոգիաները իրենց առօրյայում և աշխատանքում: Եթե տիրապետում ես ՏՏ հմտությունների, միացիր մեզ:"
+            }
+        };
+
+        const modal = document.getElementById('vol-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBadge = document.getElementById('modal-badge-display');
+        const modalImage = document.getElementById('modal-image');
+        const modalText = document.getElementById('modal-text');
+        const closeBtn = document.querySelector('.modal-close');
+
+        // Toast logic
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.innerHTML = '<span class="toast-icon">⚠️</span> <span>Այս պահին հասանելի չէ</span>';
+        document.body.appendChild(toast);
+
+        let toastTimeout;
+
+        function showToast() {
+            toast.classList.add('show');
+            if (toastTimeout) clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Attach listener to new button
+        const joinBtn = document.getElementById('join-btn');
+        if (joinBtn) {
+            joinBtn.onclick = (e) => {
+                e.preventDefault();
+                showToast();
+            };
+        }
+
+        function openVol(id) {
+            const data = volData[id];
+            modalTitle.textContent = data.title;
+            modalBadge.textContent = data.badge;
+            modalImage.src = data.image;
+            modalText.textContent = data.text;
+
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.onclick = closeModal;
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        // Mobile Menu logic
         const mobileBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
 
@@ -169,7 +319,6 @@
                 document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
             });
 
-            // Close menu when clicking links
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileBtn.classList.remove('active');

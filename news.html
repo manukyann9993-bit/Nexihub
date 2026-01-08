@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Nexihab - Նորություններ</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Nexihab">
+                <span style="color: #FF8C42; flex-shrink: 0;">Nex<span style="color: #7b726c;">ihab</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Մեր Մասին</a></li>
+                <li><a href="volunteering.html">Միջոցառումներ</a></li>
+                <li><a href="news.html" class="active">Նորություններ</a></li>
+                <li><a href="support.html">Աջակցություն</a></li>
+                <li><a href="applications.html">Անձնակազմի Դիմում</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="applications.html" class="btn-primary" style="flex-shrink: 0;">Դիմել</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding-bottom: 2rem;">
+        <div class="hero-content">
+            <h1>Մեր <span>Նորությունները</span></h1>
+            <p>Եղեք տեղեկացված Nexihab-ի բոլոր իրադարձությունների և ձեռքբերումների մասին։</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="news-grid">
+                <!-- News Card 1 -->
+                <div class="news-card" onclick="openNews(1)">
+                    <div class="news-card-header">
+                        <div class="news-card-avatar">C</div>
+                        <div class="news-card-title">Coming Soon</div>
+                    </div>
+                    <p class="news-card-preview">Ողջույն 👋 Շատ ուրախ ենք, որ․․․</p>
+                    <div class="news-card-image">
+                        <img src="coming-soon.png" alt="Intellectual Game">
+                    </div>
+                    <div class="news-card-footer">
+                        <span class="news-card-date">1 Հունվար, 2026</span>
+                        <button class="news-card-btn">Կարդալ Ավելին</button>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="news-card" onclick="openNews(2)">
+                    <div class="news-card-header">
+                        <div class="news-card-avatar">C</div>
+                        <div class="news-card-title">Coming Soon</div>
+                    </div>
+                    <p class="news-card-preview">Ողջույն 👋 Շատ ուրախ ենք, որ․․․</p>
+                    <div class="news-card-image">
+                        <img src="coming-soon.png" alt="Volunteer Meeting">
+                    </div>
+                    <div class="news-card-footer">
+                        <span class="news-card-date">1 Հունվար, 2026</span>
+                        <button class="news-card-btn">Կարդալ Ավելին</button>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="news-card" onclick="openNews(3)">
+                    <div class="news-card-header">
+                        <div class="news-card-avatar">C</div>
+                        <div class="news-card-title">Coming Soon</div>
+                    </div>
+                    <p class="news-card-preview">Ողջույն 👋 Շատ ուրախ ենք, որ․․․</p>
+                    <div class="news-card-image">
+                        <img src="coming-soon.png" alt="New Project">
+                    </div>
+                    <div class="news-card-footer">
+                        <span class="news-card-date">1 Հունվար, 2026</span>
+                        <button class="news-card-btn">Կարդալ Ավելին</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal System -->
+    <div id="news-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="date" id="modal-date"></span>
+                <h2 id="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="News Image">
+                <div id="modal-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-logo-section">
+                <a href="index.html" class="logo">
+                    <img src="logo-white.png" alt="Nexihab">
+                    <span>Nexihab</span>
+                </a>
+                <p style="opacity: 0.8;">Հայաստանի ամենախոշոր կամավորական կազմակերպություն։</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>ՄԵՆՅՈՒ</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Մեր Մասին</a></li>
+                    <li><a href="volunteering.html">Միջոցառումներ</a></li>
+                    <li><a href="news.html">Նորություններ</a></li>
+                    <li><a href="support.html">Աջակցություն</a></li>
+                    <li><a href="applications.html">Հայտեր</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>ՀԵՏԵՎԵՔ ՄԵԶ</h3>
+                <ul class="footer-links">
+                    <li><a href="https://t.me/nexihab_armenia" target="_blank">Telegram</a></li>
+                    <li><a href="https://www.instagram.com/nexihab_armenia/">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-contact">
+                <a href="tel:+37433355255">📞 +374 33355255</a>
+                <a href="mailto:info@nexihab.am">📧 nexihab.armenia@gmail.com</a>
+            </div>
+            <p class="footer-copyright">© 2026 Nexihab. Բոլոր իրավունքները պաշտպանված են։</p>
+        </div>
+    </footer>
+
+    <script>
+        // News Data
+        const newsData = {
+            1: {
+                title: "Coming-Soon",
+                date: "8 Հունվար, 2026",
+                image: "coming-soon.png",
+                text: "Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ նորություն չկա 🫤"
+            },
+            2: {
+                title: "Coming-Soon",
+                date: "8 Հունվար, 2026",
+                image: "coming-soon.png",
+                text: "Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ նորություն չկա 🫤"
+            },
+            3: {
+                title: "Coming-Soon",
+                date: "8 Հունվար, 2026",
+                image: "coming-soon.png",
+                text: "Ողջույն 👋 Շատ ուրախ ենք, որ հետաքրքրվել ես ու այցելել ես մեզ, բայց ցավոք այս պահին ակտիվ նորություն չկա 🫤"
+            }
+        };
+
+        const modal = document.getElementById('news-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDate = document.getElementById('modal-date');
+        const modalImage = document.getElementById('modal-image');
+        const modalText = document.getElementById('modal-text');
+        const closeBtn = document.querySelector('.modal-close');
+
+        function openNews(id) {
+            const data = newsData[id];
+            modalTitle.textContent = data.title;
+            modalDate.textContent = data.date;
+            modalImage.src = data.image;
+            modalText.textContent = data.text;
+
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.onclick = closeModal;
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        // Mobile Menu logic
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileBtn && navLinks) {
+            mobileBtn.addEventListener('click', function () {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
