@@ -17,12 +17,16 @@
     --light-gray: #ffffff;
 }
 
+html,
 body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: 'Inter', 'Noto Sans Armenian', sans-serif;
     color: var(--black);
     background: var(--white);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* Header & Navigation */
@@ -55,6 +59,8 @@ nav {
     font-size: 1.5rem;
     font-weight: 800;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
+    /* Prevent squashing on Samsung */
 }
 
 .logo:hover {
@@ -777,7 +783,8 @@ footer {
         top: 0;
         right: -100%;
         width: 85%;
-        height: 100vh;
+        height: 100dvh;
+        /* Dynamic viewport height for Android */
         background: white;
         flex-direction: column;
         justify-content: center;
@@ -875,12 +882,13 @@ footer {
     }
 
     .stat-number {
-        font-size: 2.5rem;
-        /* Reduced from 3.5rem to fix "ugly" look in screenshot */
+        font-size: 2.2rem;
+        /* Further reduced for better Samsung fit */
     }
 
     .stat-number::after {
-        width: 100px;
+        width: 60px;
+        /* More elegant underline on mobile */
     }
 
     .partner-item {
